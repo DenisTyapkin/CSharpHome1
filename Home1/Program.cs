@@ -53,13 +53,13 @@ if (number >= 10 && number <= 99)
     {
         Console.Write($" max = {firstDigital}");
     }
-    else if (firstDigital < secondDigital)
+    if (firstDigital < secondDigital)
     {
         Console.Write($" max = {secondDigital}");
     }
-    else 
+    if (firstDigital == secondDigital)
     {
-        Console.Write($" {firstDigital} = {secondDigital}");
+        Console.Write($"Числа равны");
     }
 }
 else
