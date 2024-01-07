@@ -18,26 +18,52 @@
 // причём X ≠ 0 и Y ≠ 0 и выдаёт номер координатной четверти плоскости,
 // в которой находится эта точка.
 
-Console.WriteLine ("Введите координату X: ");
-int X = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine ("Введите координату Y: ");
-int Y = Convert.ToInt32(Console.ReadLine());
-if ( X > 0 && Y > 0 )
-{
-    Console.Write($"Координаты X и Y в 1-ой четверти");
-}
-if ( X < 0 && Y > 0 )
-{
-    Console.Write($"Координаты X и Y в 2-ой четверти");
-}
-if ( X < 0 && Y < 0 )
-{
-    Console.Write($"Координаты X и Y в 3-ой четверти");
-}
-if ( X > 0 && Y < 0 )
-{
-    Console.Write($"Координаты X и Y в 4-ой четверти");
-}
+// Console.WriteLine ("Введите координату X: ");
+// int X = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine ("Введите координату Y: ");
+// int Y = Convert.ToInt32(Console.ReadLine());
+// if ( X > 0 && Y > 0 )
+// {
+//     Console.Write($"Координаты X и Y в 1-ой четверти");
+// }
+// if ( X < 0 && Y > 0 )
+// {
+//     Console.Write($"Координаты X и Y в 2-ой четверти");
+// }
+// if ( X < 0 && Y < 0 )
+// {
+//     Console.Write($"Координаты X и Y в 3-ой четверти");
+// }
+// if ( X > 0 && Y < 0 )
+// {
+//     Console.Write($"Координаты X и Y в 4-ой четверти");
+// }
 
+// Задача 3: Напишите программу, 
+// которая принимает на вход целое число из отрезка [10, 99] 
+// и показывает наибольшую цифру числа.
 
+Console.WriteLine ("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+if (number >= 10 && number <= 99)
+{
+    int firstDigital = number / 10;
+    int secondDigital = number % 10;
+    if (firstDigital > secondDigital)
+    {
+        Console.Write($" max = {firstDigital}");
+    }
+    else if (firstDigital < secondDigital)
+    {
+        Console.Write($" max = {secondDigital}");
+    }
+    else 
+    {
+        Console.Write($" {firstDigital} = {secondDigital}");
+    }
+}
+else
+{
+    Console.Write($" Число не подходит");
+}
 
